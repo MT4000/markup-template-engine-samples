@@ -97,5 +97,40 @@
   {!someval!}
 
   
+[var: v2]
+  Zxc
+[/var]
+
+
+{!v2!}
+
+[filter type='string.upperCase']f abc[/filter]
+[filter type='string.upperCase' val='{!v2!}'/]
+
+[filter type='string.lowerCase']
+  [filter type='string.upperCase' val='{!v2!}'/]
+[/filter]  
+
+[filter type='string.indent' spaces=2]
+abc
+[/filter]
+
+[var: v3]
+  def2  ab2
+[/var]
+
+[filter type='string.condenseSpace']
+  {!v3!}
+[/filter]
+
+[filter type='string.trim']
+  {!v3!}
+[/filter]
+
+[filter type='string.stripSpaces']
+  {!v3!}
+[/filter]
+
+  
 </body>
 [/html]
